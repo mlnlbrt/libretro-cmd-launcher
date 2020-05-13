@@ -141,12 +141,14 @@ void retro_run(void)
  */
 bool retro_load_game(const struct retro_game_info *info)
 {
-   char command[512] = "./";
+   char command[512] = "sh ";
 
    // Check if there is a command to start.
    if (info != NULL && info->path != NULL && info->path[0] != '\0') {
       sprintf(command, "%s%s &", command, info->path);
    }
+
+   printf("libretro-cmd-launcher command: %s\n", command);
 
    // Check if running Command works.
    if (system(command) == 0) {
