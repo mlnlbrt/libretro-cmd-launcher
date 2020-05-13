@@ -14,6 +14,6 @@ systemctl stop retroarch
 
 cd /storage/your/app/directory
 ./your-app-binary
-systemctl start retroarch
 
+systemctl start retroarch
 ```
